@@ -1,0 +1,10 @@
+.roundedM{
+    border-radius: 10px;
+}
+
+.but:hover{
+    color: blue;
+}
+.but1:hover{
+    color: black;
+}
