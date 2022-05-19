@@ -8,17 +8,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllFlightsComponent implements OnInit {
 
-  constructor( private allFlights:FlightDataService) { }
-  public flights:any=[];
+  constructor(private allFlights: FlightDataService) { }
+  public flights: any = [];
+  sortedDeparture: any = [];
+
   ngOnInit(): void {
-    this.flights=this.allFlights.getFlight();
+    this.flights = this.allFlights.getFlight();
     console.log(this.flights);
   }
 
-  
-  
- 
+  duration(): void {
+    this.flights.sort((objA: any, objB: any) =>
+    objA.duration > objB.duration ? 1 : -1
+    )
+    console.log(this.flights);
+  }
 
-
+  departure(): void {
+    this.flights.sort((objA: any, objB: any) =>
+      objA.departure > objB.departure ? 1 : -1
+    )
+  }
+  price(): void {
+    this.flights.sort((objA: any, objB: any) =>
+      (objA.ticketPrice > objB.ticketPrice ? 1 : -1))
+  }
+  arrival(): void {
+    this.flights.sort((objA: any, objB: any) =>
+    objA.arrival > objB.arrival ? 1 : -1
+    )
+    console.log(this.flights);
+  }
 
 }
