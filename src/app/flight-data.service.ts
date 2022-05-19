@@ -20,6 +20,8 @@ export class FlightDataService {
         arrival: '20:05',
         arrivalLocation: 'BOM',
         completeArrivalLocation: 'Mumbai, India',
+        departAirport:'Indira Gandhi International',
+        destinationAirport: 'Chhatrapati Shivaji Maharaj',
         
       },
       {
@@ -34,6 +36,8 @@ export class FlightDataService {
         emiPrice: 2592,
         arrivalLocation: 'BOM',
         completeArrivalLocation: 'Mumbai, India',
+        departAirport:'Jay Prakash Narayan ',
+        destinationAirport:'Pranaam Services'
         
       },
       {
@@ -48,7 +52,8 @@ export class FlightDataService {
         arrival: '22:05',
         arrivalLocation: 'BOM',
         completeArrivalLocation: 'Mumbai, India',
-       
+        departAirport:'Dabolim Airport',
+        destinationAirport:'Chhatrapati Shivaji Maharaj'
       },
       {
         flightName: 'SpiceJet',
@@ -62,6 +67,8 @@ export class FlightDataService {
         arrival: '14:05',
         arrivalLocation: 'BOM',
         completeArrivalLocation: 'Mumbai, India',
+        departAirport:'Sardar Vallabhbhai Patel',
+        destinationAirport:'Pranaam Services'
        
       },
       {
@@ -76,6 +83,8 @@ export class FlightDataService {
         arrival: '16:05',
         arrivalLocation: 'DEL',
         completeArrivalLocation: 'Delhi, India',
+        departAirport:'Pranaam Services',
+        destinationAirport: 'Indira Gandhi'
        
       },
       {
@@ -83,13 +92,15 @@ export class FlightDataService {
         flightImage: "https://www.goindigo.in/content/dam/indigov2/6e-website/thmbnail.jpg",
         duration: '2h 20m',
         departure: '17:45',
-        departureLocation: 'JK',
+        departureLocation: 'IXJ',
         completeLocation: 'Jammu-Kashmir, India',
         ticketPrice: 5576,
         emiPrice: 3592,
         arrival: '20:05',
         arrivalLocation: 'BOM',
         completeArrivalLocation: 'Mumbai, India',
+        departAirport:'Jammu Airport',
+        destinationAirport:'Chhatrapati Shivaji Maharaj'
        
       },
       {
@@ -104,6 +115,8 @@ export class FlightDataService {
         arrival: '20:05',
         arrivalLocation: 'DEL',
         completeArrivalLocation: 'Delhi, India',
+        departAirport:'Chhatrapati Shivaji Maharaj',
+        destinationAirport:'Indira Gandhi International '
        
       },
     ];
