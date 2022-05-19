@@ -1,10 +1,10 @@
 
 <div class="row" style="overflow-y:hidden ; overflow-x:hidden;">
-    <div class="col-sm " style="background-color:#DCDCDC;  ">
+    <div class="col-sm shadow-lg " style="background-color:#DCDCDC; box-shadow: 10px;  ">
         <h4 class="p-3">Review Your Booking</h4>
         <div class=" px-4  ">
-            <div class=" bg-danger  p-2 pl-1  roundedM"  >
-                <div class="d-flex justify-content-between">
+            <div class="  p-2 pl-1  roundedM" style="background-color:hsl(23, 95%, 54%); "  >
+                <div class="d-flex justify-content-between ">
                     <h5>{{a.flight.departureLocation}} to {{a.flight.arrivalLocation}}</h5>
                     <h5>{{a.flight.duration}}. Non Stop</h5>
                 </div>
@@ -22,7 +22,7 @@
                             style="border:none; background-color:white; font-weight: 600; text-align: left;">
                             <div><small>{{a.flight.completeLocation}}</small></div>
                             <div> <small>{{a.flight.departure}}</small></div>
-                            <div> <small style="font-size: 11px;">Indira Gandhi InterNational</small></div>
+                            <div> <small style="font-size: 11px;">{{a.flight.departAirport}}</small></div>
                         </div>
                     </div>
                     <div class="col-sm-4 " style="font-weight:600;">
@@ -42,15 +42,15 @@
                     <div class="col-sm-3 " style="font-weight:600;">
                         <div><small>{{a.flight.completeArrivalLocation}}</small></div>
                         <div> <small>{{a.flight.arrival}}</small></div>
-                        <div> <small style="font-size: 11px;">Indira Gandhi InterNational</small>
+                        <div> <small style="font-size: 11px;">{{a.flight.destinationAirport}}</small>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div  class="pt-5 ">
+            <div  class="pt-5  ">
                 <h3>Traveller Details</h3>
-                <form class="px-4 py-4 roundedM" style="background-color:white;">
+                <form class="px-4 py-4 roundedM shadow-lg" style="background-color:white;">
                     <div class="form-group row">
                         <label for="inputPassword" class="col-sm-3 col-form-label">
                             <div class="font-weight-900" style="font-weight:bolder; font-size:18px">Contact Details
@@ -106,9 +106,9 @@
    
     <div class="col-md-3 p-4  pt-5" style="background-color:#DCDCDC;">
         <h3 class="p-3">Fare Summary</h3>
-        <div class="p-2 bg-white roundedM  ">
+        <div class="p-2 bg-white roundedM shadow-lg ">
         
-        <div>
+        <div >
             <small style="font-weight:600">Base Fare</small>
             <div class="d-flex justify-content-between ">
                 <small>Adult(s)(1* Rs.{{a.flight.ticketPrice}}.00) </small>
