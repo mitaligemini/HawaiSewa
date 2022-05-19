@@ -1,63 +1,97 @@
-
-<div class="" style="font-family:Arial, Helvetica, sans-serif ; "  *ngFor="let flight of flights">
-    <div class="p-3 border" style="background-color:#DCDCDC	;">
-        <div class="p-3 bg-white">
-        <div class="d-flex flex-row bg-white" >
-            <img height="50" width="55" class=""
-                src={{flight.flightImage}}
-                alt="">
-            <p class="p-3" style="color: rgb(113, 113, 113);;">{{flight.flightName}}</p>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 " style="width: 49%;">
-                <div>{{flight.departureLocation}} <small style="font-weight:normal; color: rgb(113, 113, 113);">{{flight.completeLocation}}</small></div>
+                                    <!-- Top Menu -->
+<div style="background-color:#DCDCDC; padding: 2px;">
+    <h5 class="px-3">Sort By</h5>
+    <div class="text-center  px-4  ">
+        <div class="p-2 row bg-white roundedM">
+            <div class="col-sm-3 " style="font-weight:600;">
+                <button (click)="departure()" class="but"
+                    style=" border:none; background-color:white; font-weight: 600;"> <small> DEPARTURE </small>
+                </button>
             </div>
-            <div class="col-sm-6 ">
-                <div>{{flight.arrivalLocation}} <small style="font-weight:normal; color:rgb(113, 113, 113);;">{{flight.completeArrivalLocation}}</small></div>
+            <div class="col-sm-3 " style="font-weight:600;">
+                <button (click)="duration()" class="but" style="border:none; background-color:white; font-weight: 600;">
+                    <small>DURATION</small> </button>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="row">
-                <div class="col-sm-3  fs-5" style="font-weight:600;">
-                    {{flight.departure}}
-                </div>
-                <div class="col-sm-3 fs-6" style="font-weight:600;">
-                    {{flight.duration}}
-                </div>
-                <div class="col-sm-3 fs-5" style="font-weight:600;">
-                    {{flight.arrival}}
-                </div>
-                <div class="col-sm-3 row">
-                    <div class="col-sm">
-                        <p class=" d-flex align-items-baseline fs-4 pt-0 mt-0"
-                            style="font-weight:600; font-size:20px; padding-bottom: 0px; margin-bottom: 0px;">&#8377;
-                            {{flight.ticketPrice}}</p>
-                    </div>
-                    <div class="col-sm">
-                        <button class="rounded col-sm px-4 py-2 "
-                            style="border: none; background-color:hsl(23, 95%, 54%); color: white;">BOOK
-                        </button>
-                    </div>
-                </div>
+            <div class="col-sm-3 " style="font-weight:600;">
+                <button (click)="arrival()" class="but"
+                    style="border:none; background-color:white; font-weight: 600;"><small>ARRIVAL</small> </button>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-8" style="width: 66%;"> </div>
-            <small class="col-sm">No Cost EMI From &#8377; <span style="font-weight:600;">{{flight.emiPrice}}</span> </small>
-        </div>
-        <div class="row">
-            <div class="col-sm-8" style="width: 85%; color:#366BA1;"><small> Partially Refundable</small>
+            <div class="col-sm-3 " style="font-weight:600;">
+                <button (click)="price()" class="but1"
+                    style="border:none; background-color:white; font-weight: 600; color: #1F51FF;"> <small>PRICE <svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                        </svg> </small> </button>
             </div>
-            <small class="col-sm" style="color: #1F51FF; font-weight:600;">Flight Details <svg
-                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-chevron-down" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                </svg></small>
         </div>
     </div>
+</div>
+
+                               <!-- All Flights Data in Card -->
+<div class="" style="font-family:Arial, Helvetica, sans-serif ; " *ngFor="let flight of flights">
+    <div class="p-3 pb-0 border" style="background-color:#DCDCDC	;">
+        <div class="p-3 bg-white">
+            <div class="d-flex flex-row bg-white">
+                <img height="50" width="55" class="" src={{flight.flightImage}} alt="">
+                <p class="p-3" style="color: rgb(113, 113, 113);;">{{flight.flightName}}</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 " style="width: 49%;">
+                    <div>{{flight.departureLocation}} <small
+                            style="font-weight:normal; color: rgb(113, 113, 113);">{{flight.completeLocation}}</small>
+                    </div>
+                </div>
+                <div class="col-sm-6 ">
+                    <div>{{flight.arrivalLocation}} <small
+                            style="font-weight:normal; color:rgb(113, 113, 113);;">{{flight.completeArrivalLocation}}</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row">
+                    <div class="col-sm-3  fs-5" style="font-weight:600;">
+                        {{flight.departure}}
+                    </div>
+                    <div class="col-sm-3 fs-6" style="font-weight:600;">
+                        {{flight.duration}}
+                    </div>
+                    <div class="col-sm-3 fs-5" style="font-weight:600;">
+                        {{flight.arrival}}
+                    </div>
+                    <div class="col-sm-3 row">
+                        <div class="col-sm">
+                            <p class=" d-flex align-items-baseline fs-4 pt-0 mt-0"
+                                style="font-weight:600; font-size:20px; padding-bottom: 0px; margin-bottom: 0px;">
+                                &#8377;
+                                {{flight.ticketPrice}}</p>
+                        </div>
+                        <div class="col-sm">
+                            <button class="rounded col-sm px-3 py-2 "
+                                style="border: none; background-color:hsl(23, 95%, 54%); color: white;">BOOK
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8" style="width: 66%;"> </div>
+                <small class="col-sm">No Cost EMI From &#8377; <span style="font-weight:600;">{{flight.emiPrice}}</span>
+                </small>
+            </div>
+            <div class="row">
+                <div class="col-sm-8" style="width: 85%; color:#366BA1;"><small> Partially Refundable</small>
+                </div>
+                <small class="col-sm" style="color: #1F51FF; font-weight:600;">Flight Details <svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                    </svg></small>
+            </div>
+        </div>
     </div>
 
 </div>
-
