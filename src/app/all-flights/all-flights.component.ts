@@ -1,5 +1,8 @@
+
 import { FlightDataService } from './../flight-data.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-all-flights',
@@ -8,7 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllFlightsComponent implements OnInit {
 
-  constructor(private allFlights: FlightDataService) { }
+  constructor(private allFlights: FlightDataService,
+    private router: Router,
+    
+    ) { }
   public flights: any = [];
   sortedDeparture: any = [];
 
@@ -39,5 +45,12 @@ export class AllFlightsComponent implements OnInit {
     )
     console.log(this.flights);
   }
+  data:any;
 
+  bookclicked(flight:any){
+    this.data=flight;
+    this.router.navigateByUrl('flight-info', {state: {flight: flight}})
+  }
+
+  
 }
