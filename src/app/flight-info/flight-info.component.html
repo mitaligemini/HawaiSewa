@@ -1,0 +1,153 @@
+
+<div class="row" style="overflow-y:hidden ; overflow-x:hidden;">
+    <div class="col-sm " style="background-color:#DCDCDC;  ">
+        <h4 class="p-3">Review Your Booking</h4>
+        <div class=" px-4  ">
+            <div class=" bg-danger  p-2 pl-1  roundedM"  >
+                <div class="d-flex justify-content-between">
+                    <h5>{{a.flight.departureLocation}} to {{a.flight.arrivalLocation}}</h5>
+                    <h5>{{a.flight.duration}}. Non Stop</h5>
+                </div>
+                <div class="row bg-white p-2 pt-4" style="margin-left:1px ; margin-right:2px; height: 140px;">
+                    <div class="col-sm-2 " style="font-weight:600;">
+                        <div class="but" style=" border:none; background-color:white; font-weight: 600;">
+                            <img height="50px" width="50px" class="p-1"
+                                src={{a.flight.flightImage}}
+                                alt="">
+                            <span>{{a.flight.flightName}} </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 " style="font-weight:600;">
+                        <div class="but"
+                            style="border:none; background-color:white; font-weight: 600; text-align: left;">
+                            <div><small>{{a.flight.completeLocation}}</small></div>
+                            <div> <small>{{a.flight.departure}}</small></div>
+                            <div> <small style="font-size: 11px;">Indira Gandhi InterNational</small></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 " style="font-weight:600;">
+                        <div class="but"
+                            style="border:none; background-color:white; font-weight: 600; text-align: left;">
+                            <div><small>{{a.flight.duration}}| Economy</small></div>
+                            <div> <img height="23px" width="30px"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Plane_font_awesome.svg/1200px-Plane_font_awesome.svg.png"
+                                    alt="">----------<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                                </svg></div>
+                            <div> <small style="font-size: 11px;">Baggage 15KG | Refundable</small></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 " style="font-weight:600;">
+                        <div><small>{{a.flight.completeArrivalLocation}}</small></div>
+                        <div> <small>{{a.flight.arrival}}</small></div>
+                        <div> <small style="font-size: 11px;">Indira Gandhi InterNational</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div  class="pt-5 ">
+                <h3>Traveller Details</h3>
+                <form class="px-4 py-4 roundedM" style="background-color:white;">
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-3 col-form-label">
+                            <div class="font-weight-900" style="font-weight:bolder; font-size:18px">Contact Details
+                            </div>
+                        </label>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" id="phone" placeholder=" +91 &nbsp; Phone Number">
+                        </div>
+                    </div>
+                    <div class="text-center p-2"><small>Your booking details will be sent to this email address and
+                            mobile number.</small></div>
+                    <div style="background-color: #DCDCDC;"> <span style="font-size:18px ;"> <span
+                                style=" font-weight:bolder">&nbsp; &nbsp; ADULT</span> Important Note: </span>
+                        <small> Enter your name as it is mentioned on your passport or any government approved ID.
+                        </small>
+                    </div>
+
+                    <div class="form-group row pt-3">
+                        <div class="form-group col-md-2 ">
+                            <label for="inputCity" style="font-weight:bolder; font-size:18px">Title</label>
+                            <select class="form-control custom-select input-lg form-rounded" id="dropdown"
+                                aria-placeholder="Select">
+                                <option selected>Select <i class="bi bi-chevron-down"></i>
+                                </option>
+                                <option>Mr</option>
+                                <option>Mrs</option>
+                                <option>Miss</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="inputState"></label>
+                            <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="inputZip"></label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                </form>
+                <div style="height:20px ;"></div>
+
+            </div>
+        </div>
+    </div>
+     
+   
+    <div class="col-md-3 p-4  pt-5" style="background-color:#DCDCDC;">
+        <h3 class="p-3">Fare Summary</h3>
+        <div class="p-2 bg-white roundedM  ">
+        
+        <div>
+            <small style="font-weight:600">Base Fare</small>
+            <div class="d-flex justify-content-between ">
+                <small>Adult(s)(1* Rs.{{a.flight.ticketPrice}}.00) </small>
+                <p style="font-weight:600">{{a.flight.ticketPrice}}</p>
+            </div>
+            <small style="font-weight:600">Taxes & Fee</small>
+            <div class="d-flex justify-content-between ">
+                <small>Taxes & Fee </small>
+                <p style="font-weight:600">657.00</p>
+            </div>
+            <div class="d-flex justify-content-between ">
+                <small>Discount </small>
+                <p style="font-weight:600">-700</p>
+            </div>
+            <div class="d-flex justify-content-between ">
+                <small>Convenience Fee </small>
+                <p style="font-weight:600">0</p>
+            </div>
+            <div class="d-flex justify-content-between ">
+                <small>Cashback Wallet</small>
+                <div style="font-weight:600">0</div>
+            </div>
+            <small>Sign in to use Wallet </small>
+            <div class="d-flex justify-content-between pt-4 ">
+                <small>Insurance Fee <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-app" viewBox="0 0 16 16">
+                    <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+                  </svg></small>
+                <div style="font-weight:600">0</div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between ">
+                <p style="font-weight:600">Total Amount </p>
+                <p style="font-weight:600">{{total}}</p>
+            </div>
+        </div>
+
+        </div>
+
+
+ 
+    </div>
+</div>
