@@ -2,9 +2,23 @@
     border-radius: 10px;
 }
 
-.but:hover{
+.but:visited{
     color: blue;
 }
-.but1:hover{
-    color: black;
+
+.blueC{
+    color:blue;
 }
+.blackC{
+    color:black
+}
+.dropdown{
+    visibility: hidden;
+}
+.dropdown:hover{
+    visibility: visible;
+
+}
+
+
+
