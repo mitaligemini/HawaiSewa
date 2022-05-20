@@ -7,13 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./flight-info.component.css']
 })
 export class FlightInfoComponent implements OnInit {
-  @Input() data:any;
-  a:any;
+
+  data:any;
   total:number;
   constructor(private router: Router) { 
-     this.a=this.router.getCurrentNavigation()!.extras.state
-     console.log(this.a)
-     this.total=this.a.flight.ticketPrice + 657-700
+     this.data=this.router.getCurrentNavigation()!.extras.state
+     console.log(this.data)
+     this.total=this.data.flight.ticketPrice + 657-700
      console.log(this.total)
   }
 

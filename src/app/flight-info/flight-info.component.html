@@ -5,30 +5,30 @@
         <div class=" px-4  ">
             <div class="  p-2 pl-1  roundedM" style="background-color:hsl(23, 95%, 54%); "  >
                 <div class="d-flex justify-content-between ">
-                    <h5>{{a.flight.departureLocation}} to {{a.flight.arrivalLocation}}</h5>
-                    <h5>{{a.flight.duration}}. Non Stop</h5>
+                    <h5>{{data.flight.departureLocation}} to {{data.flight.arrivalLocation}}</h5>
+                    <h5>{{data.flight.duration}}. Non Stop</h5>
                 </div>
                 <div class="row bg-white p-2 pt-4" style="margin-left:1px ; margin-right:2px; height: 140px;">
                     <div class="col-sm-2 " style="font-weight:600;">
                         <div class="but" style=" border:none; background-color:white; font-weight: 600;">
                             <img height="50px" width="50px" class="p-1"
-                                src={{a.flight.flightImage}}
+                                src={{data.flight.flightImage}}
                                 alt="">
-                            <span>{{a.flight.flightName}} </span>
+                            <span>{{data.flight.flightName}} </span>
                         </div>
                     </div>
                     <div class="col-sm-3 " style="font-weight:600;">
                         <div class="but"
                             style="border:none; background-color:white; font-weight: 600; text-align: left;">
-                            <div><small>{{a.flight.completeLocation}}</small></div>
-                            <div> <small>{{a.flight.departure}}</small></div>
-                            <div> <small style="font-size: 11px;">{{a.flight.departAirport}}</small></div>
+                            <div><small>{{data.flight.completeLocation}}</small></div>
+                            <div> <small>{{data.flight.departure}}</small></div>
+                            <div> <small style="font-size: 11px;">{{data.flight.departAirport}}</small></div>
                         </div>
                     </div>
                     <div class="col-sm-4 " style="font-weight:600;">
                         <div class="but"
                             style="border:none; background-color:white; font-weight: 600; text-align: left;">
-                            <div><small>{{a.flight.duration}}| Economy</small></div>
+                            <div><small>{{data.flight.duration}}| Economy</small></div>
                             <div> <img height="23px" width="30px"
                                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Plane_font_awesome.svg/1200px-Plane_font_awesome.svg.png"
                                     alt="">----------<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -40,9 +40,9 @@
                         </div>
                     </div>
                     <div class="col-sm-3 " style="font-weight:600;">
-                        <div><small>{{a.flight.completeArrivalLocation}}</small></div>
-                        <div> <small>{{a.flight.arrival}}</small></div>
-                        <div> <small style="font-size: 11px;">{{a.flight.destinationAirport}}</small>
+                        <div><small>{{data.flight.completeArrivalLocation}}</small></div>
+                        <div> <small>{{data.flight.arrival}}</small></div>
+                        <div> <small style="font-size: 11px;">{{data.flight.destinationAirport}}</small>
                         </div>
                     </div>
                 </div>
@@ -86,14 +86,11 @@
                         </div>
                         <div class="form-group col-md-5">
                             <label for="inputState"></label>
-                            <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
+                            <input type="text" class="form-control" id="fname" placeholder="First Name">
                         </div>
                         <div class="form-group col-md-5">
                             <label for="inputZip"></label>
-                            <input type="text" class="form-control" id="inputZip">
+                            <input type="text" class="form-control" id="lname" placeholder="Last Name">
                         </div>
                     </div>
                 </form>
@@ -111,8 +108,8 @@
         <div >
             <small style="font-weight:600">Base Fare</small>
             <div class="d-flex justify-content-between ">
-                <small>Adult(s)(1* Rs.{{a.flight.ticketPrice}}.00) </small>
-                <p style="font-weight:600">{{a.flight.ticketPrice}}</p>
+                <small>Adult(s)(1* Rs.{{data.flight.ticketPrice}}.00) </small>
+                <p style="font-weight:600">{{data.flight.ticketPrice}}</p>
             </div>
             <small style="font-weight:600">Taxes & Fee</small>
             <div class="d-flex justify-content-between ">
