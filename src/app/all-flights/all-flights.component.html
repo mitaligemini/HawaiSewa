@@ -4,26 +4,50 @@
     <div class="text-center  px-4  ">
         <div class="p-2 row bg-white roundedM">
             <div class="col-sm-3 " style="font-weight:600;">
-                <button (click)="departure()" class="but"
-                    style=" border:none; background-color:white; font-weight: 600;"> <small> DEPARTURE </small>
-                </button>
-            </div>
-            <div class="col-sm-3 " style="font-weight:600;">
-                <button (click)="duration()" class="but" style="border:none; background-color:white; font-weight: 600;">
-                    <small>DURATION</small> </button>
-            </div>
-            <div class="col-sm-3 " style="font-weight:600;">
-                <button (click)="arrival()" class="but"
-                    style="border:none; background-color:white; font-weight: 600;"><small>ARRIVAL</small> </button>
-            </div>
-            <div class="col-sm-3 " style="font-weight:600;">
-                <button (click)="price()" class="but1"
-                    style="border:none; background-color:white; font-weight: 600; color: #1F51FF;"> <small>PRICE <svg
+                <button (click)="departure()"  [ngClass]="isDeparture== true ? 'blueC': 'blackC'"
+                    style=" border:none; background-color:white; font-weight: 600;"> <small> DEPARTURE 
+                        <span [ngClass]="isDeparture== true ? 'visible': 'invisible'"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-arrow-up" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
-                        </svg> </small> </button>
+                        </svg></span>
+                    </small>
+                </button>
+            </div>
+            <div class="col-sm-3 " style="font-weight:600;">
+                <button (click)="duration()"  [ngClass]="isDuration== true ? 'blueC': 'blackC'" style="border:none; background-color:white; font-weight: 600;">
+                    <small>DURATION
+                        <span [ngClass]="isDuration== true ? 'visible': 'invisible'"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                        </svg></span>
+                    </small> </button>
+            </div>
+            <div class="col-sm-3 " style="font-weight:600;">
+                <button (click)="arrival()"  [ngClass]="isArrival== true ? 'blueC': 'blackC'"
+                    style="border:none; background-color:white; font-weight: 600;"><small>ARRIVAL
+                        <span [ngClass]="isArrival== true ? 'visible': 'invisible'"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                        </svg></span>
+                    </small> </button>
+            </div>
+            <div class="col-sm-3 " style="font-weight:600;">
+                <button (click)="price()"  [ngClass]="isPrice== true ? 'blueC': 'blackC'"
+                    style="border:none; background-color:white; font-weight: 600;  "> 
+                    <small>PRICE 
+                        <span [ngClass]="isPrice== true ? 'visible': 'invisible'"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                        </svg></span>
+                    </small> </button>
             </div>
         </div>
     </div>
@@ -76,6 +100,8 @@
                     </div>
                 </div>
             </div>
+
+            
             <div class="row">
                 <div class="col-sm-8" style="width: 66%;"> </div>
                 <small class="col-sm">No Cost EMI From &#8377; <span style="font-weight:600;">{{flight.emiPrice}}</span>
@@ -85,20 +111,18 @@
                 <div class="col-sm-8" style="width: 85%; color:#366BA1;"><small> Partially Refundable</small>
                 </div>
                 <small class="col-sm">
-                <button  style="color: #1F51FF; font-weight:600; text-decoration: none; border: none; background-color: white;">Flight Details <svg
+                <button   style="color: #1F51FF; font-weight:600; text-decoration: none; border: none; background-color: white;">Flight Details <svg
                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-chevron-down" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                     </svg>
                 
-                </button></small>
-                    
+                </button></small>        
             </div>
         </div>
     </div>
-
 </div>
-<div class="h-10 bg-red" style="height:200px;"></div>
+
 
 
