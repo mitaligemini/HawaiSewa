@@ -1,14 +1,14 @@
-<section  class="vh-100"  style="background-color:#ADD8E6;">
+<section  class="vh-100" >
     <div class="container py-3 h-60">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col col-xl-9">
-                <div class="card" style="border-radius: 1rem;">
+                <div class="card" style="border-radius: 1rem;border:1px solid ;">
                     <div class="row g-0">
                         <div class="col-md-6 col-lg-5 d-none d-md-block">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtOwFCUPMMWP4YCTwkT0Gqux6xpc-3ZMv1MktWb-nS3ZrrJhPbvnWDYNtkMUzE69cF8TM&usqp=CAU"
                                 alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; height: 100%;"/>
                         </div>
-                        <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                        <div class="col-md-6 col-lg-7 d-flex align-items-center" style="background-color: #E8E8E8; border-radius: 0 1rem 1rem 0;">
                             <div class="card-body p-4 p-lg-5 text-black">
                                 <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
                                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account
@@ -39,10 +39,10 @@
                                         <button class="btn btn-dark btn-block" type="submit"
                                             [disabled]="myForm.invalid">Login</button>
                                     </div>
-                                    <a class="small text-muted" href="#!">Forgot password?</a>
+                                    <a class="small text-muted" style="color: rgb(102, 100, 100);">Forgot password?</a>
                                     <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account?
                                         <a href="/signup"
-                                            style="color: gray; text-decoration: none; text-decoration: underline;">Register
+                                            style="color: rgb(102, 100, 100); text-decoration: none; text-decoration: underline;">Register
                                             here</a>
                                     </p>
                                 </form>
